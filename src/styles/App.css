@@ -1,0 +1,641 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f9fc;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .menu a {
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar .menu a:hover {
+  color: #ffdd57;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  padding: 2rem;
+}
+
+.dashboard h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.dashboard .card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Section Styles */
+.content {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Theme Switcher Styles */
+.theme-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.theme-switcher button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme-switcher button:hover {
+  background: #0056b3;
+}
+
+/* Patient Management Styles */
+.patient-management {
+  padding: 2rem;
+}
+
+.patient-management .search-bar {
+  margin-bottom: 1.5rem;
+}
+
+.patient-management .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.patient-management .form-group input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  transition: all 0.3s;
+}
+
+.patient-management .form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.patient-management .btn-add {
+  background-color: #28a745;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.patient-management .btn-add:hover {
+  background-color: #218838;
+}
+
+.patient-management .table {
+  margin-top: 1.5rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patient-management .table th,
+.patient-management .table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.patient-management .table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.patient-management .table td button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.patient-management .table td .btn-edit {
+  background-color: #ffc107;
+  color: white;
+}
+
+.patient-management .table td .btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.patient-management .table td .btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.patient-management .table td .btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .patient-management .search-bar {
+    margin-bottom: 1rem;
+  }
+
+  .patient-management .form-group input {
+    width: 100%;
+  }
+
+  .patient-management .table {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .patient-management .form-group input {
+    padding: 0.5rem;
+  }
+
+  .patient-management .btn-add {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .patient-management .table td button {
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+/* Doctor Management Styles */
+.doctor-management {
+  padding: 2rem;
+}
+
+.doctor-management .search-bar {
+  margin-bottom: 1.5rem;
+}
+
+.doctor-management .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.doctor-management .form-group input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  transition: all 0.3s;
+}
+
+.doctor-management .form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.doctor-management .btn-add {
+  background-color: #28a745;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.doctor-management .btn-add:hover {
+  background-color: #218838;
+}
+
+.doctor-management .table {
+  margin-top: 1.5rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.doctor-management .table th,
+.doctor-management .table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.doctor-management .table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.doctor-management .table td button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.doctor-management .table td .btn-edit {
+  background-color: #ffc107;
+  color: white;
+}
+
+.doctor-management .table td .btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.doctor-management .table td .btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.doctor-management .table td .btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .doctor-management .search-bar {
+    margin-bottom: 1rem;
+  }
+
+  .doctor-management .form-group input {
+    width: 100%;
+  }
+
+  .doctor-management .table {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-management .form-group input {
+    padding: 0.5rem;
+  }
+
+  .doctor-management .btn-add {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .doctor-management .table td button {
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+.appointment-management-container {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.appointment-management-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+
+.appointment-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.appointment-form input {
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.appointment-form button {
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-form button:hover {
+  background-color: #0056b3;
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.appointments-table th, .appointments-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.appointments-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.appointments-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.appointments-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .appointment-form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .appointment-form input, .appointment-form button {
+    width: 100%;
+  }
+}
+
+
+.pharmacy-management-container {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.pharmacy-management-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+
+.pharmacy-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.pharmacy-form input {
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.pharmacy-form button {
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pharmacy-form button:hover {
+  background-color: #0056b3;
+}
+
+.medications-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.medications-table th, .medications-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.medications-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.medications-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.medications-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.medications-table button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.medications-table button:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .pharmacy-form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pharmacy-form input, .pharmacy-form button {
+    width: 100%;
+  }
+}
+
+.billing-management-container {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.billing-management-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+
+.billing-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.billing-form input, .billing-form select {
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.billing-form button {
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.billing-form button:hover {
+  background-color: #0056b3;
+}
+
+.bills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.bills-table th, .bills-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.bills-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.bills-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.bills-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.bills-table button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.bills-table button:hover {
+  background-color: #c0392b;
+}
+
+.bills-table select {
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .billing-form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .billing-form input, .billing-form select, .billing-form button {
+    width: 100%;
+  }
+}
+.theme-switcher button {
+  color: white;
+}
+
+
+
